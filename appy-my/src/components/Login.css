@@ -1,0 +1,105 @@
+/* Conteneur principal */
+.login-clean {
+    background: linear-gradient(135deg, #f1f7fc 0%, #d1e4f3 100%);
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Formulaire */
+  .login-clean form {
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    color: #505e6c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Formulaire - Effet de survol */
+  .login-clean form:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Illustration d'icône */
+  .login-clean .illustration {
+    text-align: center;
+    padding: 0 0 20px;
+    font-size: 120px;
+    color: #f4476b;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-clean .illustration:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Champs de saisie */
+  .login-clean form .form-control {
+    background: #f7f9fc;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    outline: none;
+    color: #505e6c;
+    text-indent: 10px;
+    height: 45px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-clean form .form-control:focus {
+    border-color: #f4476b;
+  }
+  
+  /* Bouton de connexion */
+  .login-clean form .btn-primary {
+    background: #f4476b;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: none;
+    margin-top: 20px;
+    text-shadow: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  /* Effet sur le bouton au survol */
+  .login-clean form .btn-primary:hover {
+    background: #eb3b60;
+    transform: translateY(-2px);
+  }
+  
+  .login-clean form .btn-primary:active {
+    transform: translateY(1px);
+  }
+  
+  /* Lien pour mot de passe oublié */
+  .login-clean form .forgot {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #6f7a85;
+    opacity: 0.9;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .login-clean form .forgot:hover,
+  .login-clean form .forgot:active {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  
