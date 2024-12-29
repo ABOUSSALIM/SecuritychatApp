@@ -63,13 +63,6 @@ Pour gérer les tokens côté client, nous utilisons :
         const response = await axios.post('/api/auth/refresh', { refreshToken });
 ```
 
-## Table des matières
-
-- [Aperçu de JWT](#apercu-de-jwt)
-- [Technologies utilisées](#technologies-utilisées)
-- [Configuration du Backend](#configuration-du-backend)
-- [Configuration du Frontend](#configuration-du-frontend)
-- [Intégration de JWT avec Spring Boot](#intégration-de-jwt-avec-spring-boot)
 
 ## Aperçu du projet
 
