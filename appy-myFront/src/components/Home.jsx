@@ -69,14 +69,14 @@ function Home() {
               </a>
             </div>
             <div className="profile-name">
-              <h2>Markins Smithertain</h2>
+              <h2>Profile ici </h2>
             </div>
             
             <div className="fb-profile-block-menu">
               <div className="block-menu">
                 <ul>
-                  <li><a href="/home">Home</a></li>
-                  <li><a href="#">MM</a></li>
+                  <li><a href="/home">Accueil</a></li>
+                  <li><a href="#">Groupes</a></li>
                   <li> <a href="#"  onClick={handleLogout}> Déconnexion   </a></li>
                 </ul>
               </div>
@@ -103,7 +103,7 @@ function Home() {
                 <td>
   {user.appRoles.map(role => role.name)
     ? user.appRoles.map(role => role.name).join(", ") 
-    : "Aucun rôle"}
+    : "USER"}
 </td>
 
               </tr>

@@ -1,0 +1,49 @@
+services:
+ 
+  db:
+    image: postgres:13
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: chatDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: graphql
+    ports:
+      - "5050:5432"  
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "localhost", "-U", "postgres"]
+      interval: 5s
+      retries: 10
+      timeout: 2s
+
+  backend:
+    build:
+      context: ./chatApp 
+    ports:
+      - "8083:8083"  
+    depends_on:
+      db:
+        condition: service_healthy  
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/chatDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: graphql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "db", "-U", "postgres"]
+      interval: 5s
+      retries: 10
+      timeout: 2s
+
+  frontend:
+    build:
+      context: ./appy-myFront  
+    ports:
+      - "80:80"  
+    depends_on:
+      backend:
+        condition: service_started  
+
+volumes:
+  postgres-data:
+    driver: local
