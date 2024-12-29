@@ -107,11 +107,12 @@ le refresh-token est le 2 ème jeton qui permet d'obtenir un nouveau access-toke
 
 
 
-Après la création des compte des clients,Toutes les mots de passe seront hashées
+**Après la création des compte des clients,Toutes les mots de passe seront hashées**
 
 <img width="479" alt="Capture d'écran 2024-12-29 164146" src="https://github.com/user-attachments/assets/5f918b1d-6154-4dfb-9d4e-084914767104" />
 
-
+# Dockerisation du Projet 
+<img width="954" alt="Capture d'écran 2024-12-29 170300" src="https://github.com/user-attachments/assets/43291077-c665-4f1f-bdce-3ee61e10824d" />
 
 ## Liste EndPoint 
 ![api_table_image](https://github.com/user-attachments/assets/6e6ce0a2-228d-4b72-8cb1-1a06c9514ee4)
