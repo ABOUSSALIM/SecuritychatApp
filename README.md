@@ -75,8 +75,20 @@ le refresh-token est le 2 ème jeton qui permet d'obtenir un nouveau access-toke
 
 ### Tokens encodés :
 <img width="646" alt="Capture d'écran 2024-12-29 162618" src="https://github.com/user-attachments/assets/73f42138-f4be-4e48-93f0-8a9207b798d5" />
+
 ### Tokens decodés :
 <img width="922" alt="Capture d'écran 2024-12-29 162801" src="https://github.com/user-attachments/assets/60b4c62a-52f6-46ce-8f72-4dd9ace01bf9" />
+
+## Base De données 
+
+<img width="885" alt="Capture d'écran 2024-12-29 164100" src="https://github.com/user-attachments/assets/c052960d-940c-4596-98fa-6301a9b66687" />
+
+Après la création des compte des clients,Toutes les mots de passe seront hashées
+
+<img width="479" alt="Capture d'écran 2024-12-29 164146" src="https://github.com/user-attachments/assets/5f918b1d-6154-4dfb-9d4e-084914767104" />
+
+
+
 
 ## Liste EndPoint 
 ![api_table_image](https://github.com/user-attachments/assets/6e6ce0a2-228d-4b72-8cb1-1a06c9514ee4)
