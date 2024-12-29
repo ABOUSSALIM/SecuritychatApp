@@ -20,7 +20,7 @@ Ce projet démontre comment implémenter l'authentification stateless avec JWT d
 ### Prérequis
 
 - **Java 17**
-- **Spring Security Mvc Ioc** (3.3.0 ou plus récent)
+- **Spring Security Mvc Ioc** 
 - **PostgreSQL** installé localement
 
 ### Dépendances
