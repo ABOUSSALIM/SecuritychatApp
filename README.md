@@ -44,6 +44,25 @@ Ce projet démontre comment implémenter l'authentification stateless avec JWT d
     <scope>runtime</scope>
 </dependency>
 ```
+
+
+
+## Configuration Front-end :
+
+```xml
+npm install js-cookie axios
+```
+### Stockage des Tokens dans React avec Cookies
+Pour gérer les tokens côté client, nous utilisons :
+
+**js-cookie :** Pour manipuler les cookies.
+**axios :** Pour gérer les requêtes HTTP avec les tokens JWT.
+
+```xml
+        const refreshToken = Cookies.get('refreshToken');
+        const response = await axios.post('/api/auth/refresh', { refreshToken });
+```
+
 ## Table des matières
 
 - [Aperçu de JWT](#apercu-de-jwt)
@@ -74,19 +93,22 @@ le access-token est le jeton pour s'authentifier et se connecter .
 le refresh-token est le 2 ème jeton qui permet d'obtenir un nouveau access-token après sa experation .
 
 ### Tokens encodés :
+
 <img width="646" alt="Capture d'écran 2024-12-29 162618" src="https://github.com/user-attachments/assets/73f42138-f4be-4e48-93f0-8a9207b798d5" />
 
 ### Tokens decodés :
+
 <img width="922" alt="Capture d'écran 2024-12-29 162801" src="https://github.com/user-attachments/assets/60b4c62a-52f6-46ce-8f72-4dd9ace01bf9" />
 
 ## Base De données 
 
 <img width="885" alt="Capture d'écran 2024-12-29 164100" src="https://github.com/user-attachments/assets/c052960d-940c-4596-98fa-6301a9b66687" />
 
+
+
 Après la création des compte des clients,Toutes les mots de passe seront hashées
 
 <img width="479" alt="Capture d'écran 2024-12-29 164146" src="https://github.com/user-attachments/assets/5f918b1d-6154-4dfb-9d4e-084914767104" />
-
 
 
 
