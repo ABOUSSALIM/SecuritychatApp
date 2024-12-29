@@ -92,15 +92,16 @@ Un JWT (JSON Web Token) se compose généralement de trois parties séparées pa
 le access-token est le jeton pour s'authentifier et se connecter .
 le refresh-token est le 2 ème jeton qui permet d'obtenir un nouveau access-token après sa experation .
 
-### Tokens encodés :
+### Token encodé :
 
 <img width="646" alt="Capture d'écran 2024-12-29 162618" src="https://github.com/user-attachments/assets/73f42138-f4be-4e48-93f0-8a9207b798d5" />
 
-### Tokens decodés :
+### Token decodé :
 
 <img width="922" alt="Capture d'écran 2024-12-29 162801" src="https://github.com/user-attachments/assets/60b4c62a-52f6-46ce-8f72-4dd9ace01bf9" />
 
-## Base De données 
+
+## Base De données PostgreSQL :
 
 <img width="885" alt="Capture d'écran 2024-12-29 164100" src="https://github.com/user-attachments/assets/c052960d-940c-4596-98fa-6301a9b66687" />
 
