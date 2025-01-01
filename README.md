@@ -8,7 +8,9 @@
 Le projet est une application web de messagerie en temps réel qui permet aux utilisateurs d'échanger des messages de manière fluide et sécurisée. Il utilise React pour le frontend, Spring Boot pour le backend, et PostgreSQL comme base de données. L'authentification des utilisateurs est gérée de manière stateless avec JSON Web Tokens (JWT), assurant ainsi une gestion sécurisée des sessions sans stockage d'état côté serveur.Les messages sont échangés en temps réel grâce à l'intégration des WebSockets et du protocole STOMP. Ce mécanisme permet une communication bidirectionnelle et asynchrone entre le client et le serveur, garantissant ainsi que les messages sont envoyés et reçus instantanément. Le backend, configuré avec Spring Boot et Spring WebSocket, gère les connexions WebSocket et les messages STOMP.
 
 
-<img width="960" alt="Capture d'écran 2025-01-01 190103" src="https://github.com/user-attachments/assets/0899e2f0-fb68-4582-af5b-9ba22389ed5d" />
+<img width="960" alt="Capture d'écran 2025-01-01 190103" src="https://github.com/user-attachments/assets/0899e2f0-fb68-4582-af5b-9ba22389ed5d" /> 
+![](https://github.com/user-attachments/assets/e7634607-38ff-4d49-88f5-1739c6f76f4c)
+
 
 
 
