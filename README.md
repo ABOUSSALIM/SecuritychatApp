@@ -119,12 +119,22 @@ le refresh-token est le 2 ème jeton qui permet d'obtenir un nouveau access-toke
 pour le Front-end :
 
 ```xml
+@Configuration
+@EnableWebSocketMessageBroker
+public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+    @Override
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
+}}
+```
+```xml
 npm install stompjs   
 ```
 
 
 # Dockerisation du Projet 
 <img width="954" alt="Capture d'écran 2024-12-29 170300" src="https://github.com/user-attachments/assets/43291077-c665-4f1f-bdce-3ee61e10824d" />
+
 
 ## Liste EndPoint 
 ![api_table_image](https://github.com/user-attachments/assets/6e6ce0a2-228d-4b72-8cb1-1a06c9514ee4)
