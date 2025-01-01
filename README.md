@@ -10,7 +10,6 @@ Le projet est une application web de messagerie en temps réel qui permet aux ut
 
 <img width="960" alt="Capture d'écran 2025-01-01 190103" src="https://github.com/user-attachments/assets/0899e2f0-fb68-4582-af5b-9ba22389ed5d" /> 
 
-![WhatsApp Image 2025-01-01 à 18 57 23_9c9b5199](https://github.com/user-attachments/assets/2f4a1360-255e-4986-8dd0-c716915f7ec4)
 
 
 
