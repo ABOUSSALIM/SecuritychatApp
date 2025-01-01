@@ -1,4 +1,7 @@
-# Authentification JWT avec Spring Boot/React et configuration des webSockets pour l'envoie et la reception des Messages
+
+#ChatApp : Messagerie Instantanée et Partage en Temps Réel
+
+### Authentification JWT avec Spring Boot/React et configuration des webSockets pour l'envoie et la reception des Messages
 
 
 
