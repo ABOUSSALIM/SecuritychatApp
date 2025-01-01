@@ -1,4 +1,4 @@
-# Authentification JWT avec Spring Boot et React  et et configuration des webSockets pour l'envoie et la reception des Messages
+# Authentification JWT avec Spring Boot/React et configuration des webSockets pour l'envoie et la reception des Messages
 
 
 
