@@ -2,7 +2,9 @@
 
 
 
-Ce partie de mon projet démontre comment implémenter l'authentification stateless avec JWT dans une application web utilisant React pour le frontend, Spring Boot pour le backend, et PostgreSQL comme base de données. Il permet aux utilisateurs de se connecter en toute sécurité, d'obtenir des tokens JWT et d'interagir avec des routes API protégées.
+Le projet est une application web de messagerie en temps réel qui permet aux utilisateurs d'échanger des messages de manière fluide et sécurisée. Il utilise React pour le frontend, Spring Boot pour le backend, et PostgreSQL comme base de données. L'authentification des utilisateurs est gérée de manière stateless avec JSON Web Tokens (JWT), assurant ainsi une gestion sécurisée des sessions sans stockage d'état côté serveur.
+
+
 
 
 ## Structure et Architecture
