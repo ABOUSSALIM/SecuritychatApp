@@ -10,7 +10,7 @@ Ce partie de mon projet démontre comment implémenter l'authentification statel
 
 ## Technologies utilisées
 
-- **Frontend** : React.js, Axios,Stopm,Ws, Bootstrap
+- **Frontend** : React.js, Axios,Stopmjs,Ws, Bootstrap
 - **Backend** : Spring Boot, Spring Security, JWT
 - **Base de données** : PostgreSQL
 - **Authentification** : Tokens JWT stateless
@@ -34,10 +34,7 @@ Ce partie de mon projet démontre comment implémenter l'authentification statel
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
-<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
-		</dependency>
+
 <dependency>
     <groupId>org.springframework.security</groupId>
     <artifactId>spring-security-jwt</artifactId>
@@ -54,7 +51,7 @@ Ce partie de mon projet démontre comment implémenter l'authentification statel
 ## Configuration Front-end :
 
 ```xml
-npm install js-cookie axios stompjs 
+npm install js-cookie axios  
 ```
 ### Stockage des Tokens dans React avec Cookies
 Pour gérer les tokens côté client, nous utilisons :
@@ -115,6 +112,23 @@ le refresh-token est le 2 ème jeton qui permet d'obtenir un nouveau access-toke
 
 ## Liste EndPoint 
 ![api_table_image](https://github.com/user-attachments/assets/6e6ce0a2-228d-4b72-8cb1-1a06c9514ee4)
+
+
+
+# Configuration des webSockets 
+## Dépendances a ajouter 
+```xml
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-websocket</artifactId>
+</dependency>
+```
+pour le Front-end :
+
+```xml
+npm install stompjs   
+```
+
 
 ## Demo
 
