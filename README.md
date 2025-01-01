@@ -151,6 +151,8 @@ npm install stompjs
 
 https://github.com/user-attachments/assets/c4767e5a-350e-47ec-aef5-53dbf3f84e69
 
+<img width="143" alt="Capture d'écran 2025-01-01 194212" src="https://github.com/user-attachments/assets/0547670a-b837-4a8a-abe6-73ac272fa556" />
+
 # Réalisé par :
 
 
