@@ -1,8 +1,8 @@
-# Authentification JWT avec Spring Boot et React  et Gestion des rôles
+# Authentification JWT avec Spring Boot et React  et et configuration des webSockets pour l'envoie et la reception des Messages
 
 
 
-Ce projet démontre comment implémenter l'authentification stateless avec JWT dans une application web utilisant React pour le frontend, Spring Boot pour le backend, et PostgreSQL comme base de données. Il permet aux utilisateurs de se connecter en toute sécurité, d'obtenir des tokens JWT et d'interagir avec des routes API protégées.
+Ce partie de mon projet démontre comment implémenter l'authentification stateless avec JWT dans une application web utilisant React pour le frontend, Spring Boot pour le backend, et PostgreSQL comme base de données. Il permet aux utilisateurs de se connecter en toute sécurité, d'obtenir des tokens JWT et d'interagir avec des routes API protégées.
 
 
 ## Structure et Architecture
@@ -10,7 +10,7 @@ Ce projet démontre comment implémenter l'authentification stateless avec JWT d
 
 ## Technologies utilisées
 
-- **Frontend** : React.js, Axios, Bootstrap
+- **Frontend** : React.js, Axios,Stopm,Ws, Bootstrap
 - **Backend** : Spring Boot, Spring Security, JWT
 - **Base de données** : PostgreSQL
 - **Authentification** : Tokens JWT stateless
@@ -35,6 +35,10 @@ Ce projet démontre comment implémenter l'authentification stateless avec JWT d
     <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+<dependency>
     <groupId>org.springframework.security</groupId>
     <artifactId>spring-security-jwt</artifactId>
 </dependency>
@@ -50,17 +54,19 @@ Ce projet démontre comment implémenter l'authentification stateless avec JWT d
 ## Configuration Front-end :
 
 ```xml
-npm install js-cookie axios
+npm install js-cookie axios stompjs 
 ```
 ### Stockage des Tokens dans React avec Cookies
 Pour gérer les tokens côté client, nous utilisons :
 
 **js-cookie :** Pour manipuler les cookies.
 **axios :** Pour gérer les requêtes HTTP avec les tokens JWT.
+**stomp :** Pour gérer les connexion instantanés des sockets.
 
 ```xml
         const refreshToken = Cookies.get('refreshToken');
         const response = await axios.post('/api/auth/refresh', { refreshToken });
+        const Sock = new SockJS('http://localhost:8083/ws');
 ```
 
 
