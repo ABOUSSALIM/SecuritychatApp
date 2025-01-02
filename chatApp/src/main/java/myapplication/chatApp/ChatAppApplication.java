@@ -39,23 +39,8 @@ public class ChatAppApplication {
 				accountService.addNewRole(new AppRole(null, "PRODUCT_MANAGER"));
 				accountService.addNewRole(new AppRole(null, "BILLS_MANAGER"));
 
-				// Ajouter des utilisateurs avec un HashSet au lieu d'un ArrayList
-				accountService.addNewUser(new AppUser(null, "user1", "1234", new ArrayList<>()));
-				accountService.addNewUser(new AppUser(null, "user2", "1234", new ArrayList<>()));
-				accountService.addNewUser(new AppUser(null, "user3", "1234", new ArrayList<>()));
-				accountService.addNewUser(new AppUser(null, "user4", "1234", new ArrayList<>()));
-				accountService.addNewUser(new AppUser(null, "admin", "1234", new ArrayList<>()));
 
-				// Attribuer des rôles aux utilisateurs
-				accountService.addRoleToUser("user1", "USER");
-				accountService.addRoleToUser("admin", "ADMIN");
-				accountService.addRoleToUser("admin", "USER");
-				accountService.addRoleToUser("user2", "USER");
-				accountService.addRoleToUser("user2", "CUSTOMER_MANAGER");
-				accountService.addRoleToUser("user3", "USER");
-				accountService.addRoleToUser("user3", "PRODUCT_MANAGER");
-				accountService.addRoleToUser("user4", "USER");
-				accountService.addRoleToUser("user4", "BILLS_MANAGER");
+
 			};
 		}
 

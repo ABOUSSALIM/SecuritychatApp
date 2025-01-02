@@ -12,10 +12,10 @@
 .register-photo .image-holder {
     display: table-cell;
     width: auto;
-    background: url(https://www.ensaj.ucd.ac.ma/wp-content/uploads/2015/07/ensaj13.jpg);
+    background: url(https://scontent.fcmn2-1.fna.fbcdn.net/v/t39.30808-6/326477973_502876975101577_4181373225854507220_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHwqh87Pe-_FA7SLRcFO675jbga9Bz5G4KNuBr0HPkbgkVgExhFSAA3SpS4PsMUGmNZYMeFAIsuncUnCTUMlEOp&_nc_ohc=CEL8BBNfzqUQ7kNvgH_7OAp&_nc_zt=23&_nc_ht=scontent.fcmn2-1.fna&_nc_gid=A-1ZoxuHQZdzq8pdcREoJFK&oh=00_AYCDCXUhy3QXRLvItot9cve9fZczvKtnSSBJO3cwo9fUjg&oe=677B0EA1);
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 75%;
     transition: transform 0.3s ease-in-out;
 }
 

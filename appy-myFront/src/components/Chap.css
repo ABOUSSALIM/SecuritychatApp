@@ -1,0 +1,357 @@
+body {
+    background-color: #f4f7f6;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    background: #fff;
+    transition: .5s;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: .55rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat-app .people-list {
+    width: 280px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 7;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+.chat-app .chat {
+    margin-left: 280px;
+    border-left: 1px solid #eaeaea;
+    background-color: #fff;
+}
+
+.people-list {
+    transition: .5s ease-in-out;
+}
+
+.people-list .chat-list li {
+    padding: 10px 15px;
+    list-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.people-list .chat-list li:hover {
+    background-color: #efefef;
+}
+
+.people-list .chat-list li.active {
+    background-color: #efefef;
+}
+
+.people-list .chat-list li .name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.people-list .chat-list img {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.people-list img {
+    float: left;
+    border-radius: 50%;
+}
+
+.people-list .about {
+    float: left;
+    padding-left: 8px;
+}
+
+.people-list .status {
+    color: #999;
+    font-size: 13px;
+}
+
+.chat .chat-header {
+    padding: 15px 20px;
+    border-bottom: 2px solid #f4f7f6;
+    background-color: #f9f9f9;
+}
+
+.chat .chat-header img {
+    float: left;
+    border-radius: 40px;
+    width: 40px;
+}
+
+.chat .chat-header .chat-about {
+    float: left;
+    padding-left: 10px;
+}
+
+.chat .chat-history {
+    padding: 20px;
+    border-bottom: 2px solid #fff;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+.chat .chat-history ul {
+    padding: 0;
+}
+
+.chat .chat-history ul li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.chat .chat-history .message-data {
+    margin-bottom: 15px;
+}
+
+.chat .chat-history .message-data img {
+    border-radius: 40px;
+    width: 40px;
+}
+
+.chat .chat-history .message-data-time {
+    color: #434651;
+    padding-left: 6px;
+    font-size: 12px;
+}
+
+.chat .chat-history .message {
+    color: #444;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 16px;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+}
+
+.chat .chat-history .message:after {
+    bottom: 100%;
+    left: 7%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+.chat .chat-history .my-message {
+    background-color: #efefef;
+    text-align: left;
+}
+
+.chat .chat-history .my-message:after {
+    bottom: 100%;
+    left: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #efefef;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+.chat .chat-history .other-message {
+    background-color: #e8f1f3;
+    text-align: right;
+}
+
+.chat .chat-history .other-message:after {
+    border-bottom-color: #e8f1f3;
+    left: 93%;
+}
+
+.chat .chat-message {
+    padding: 20px;
+}
+
+.online,
+.offline,
+.me {
+    margin-right: 2px;
+    font-size: 8px;
+    vertical-align: middle;
+}
+
+.online {
+    color: #86c541;
+}
+
+.offline {
+    color: #e47297;
+}
+
+.me {
+    color: #1d8ecd;
+}
+
+.float-right {
+    float: right;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.all_conversation {
+    margin-top: 20px;
+}
+
+.all_conversation button {
+    background: #f5f3f3;
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.all_conversation button:hover {
+    background-color: #ececec;
+}
+
+.all_conversation button i {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .chat-app .people-list {
+        height: 465px;
+        width: 100%;
+        overflow-x: auto;
+        background: #fff;
+        left: -400px;
+        display: none;
+    }
+
+    .chat-app .people-list.open {
+        left: 0;
+    }
+
+    .chat-app .chat {
+        margin: 0;
+    }
+
+    .chat-app .chat .chat-header {
+        border-radius: 0.55rem 0.55rem 0 0;
+    }
+
+    .chat-app .chat-history {
+        height: 300px;
+        overflow-x: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .chat-app .chat-list {
+        height: 650px;
+        overflow-x: auto;
+    }
+
+    .chat-app .chat-history {
+        height: 600px;
+        overflow-x: auto;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .chat-app .chat-list {
+        height: 480px;
+        overflow-x: auto;
+    }
+
+    .chat-app .chat-history {
+        height: calc(100vh - 350px);
+        overflow-x: auto;
+    }
+}
+
+.my-message {
+    background-color: #d1e7dd; /* Light green for my message */
+    color: #333; /* Dark text for readability */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.other-message {
+    background-color: #f8d7da; /* Light red for other messages */
+    color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.message-data-time {
+    font-size: 0.8em;
+    color: gray;
+}
+
+
+.register {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .register button {
+    font-size: 16px;
+    background-color: #02b80b;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .register button:hover {
+    background-color: #d11261;
+  }
+  
+  .register svg {
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .register button:hover svg {
+    transform: scale(1.1);
+  }
+  

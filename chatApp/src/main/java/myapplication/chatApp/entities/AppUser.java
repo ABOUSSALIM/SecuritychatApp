@@ -23,6 +23,8 @@ public class AppUser {
     private String username;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+
+    private String name ;
     @CreatedDate
     private LocalDate dateCreation ;
 
@@ -30,10 +32,11 @@ public class AppUser {
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<AppRole> appRoles = new ArrayList<>();
 
-    public AppUser(Long id, String username, String password, Collection<AppRole> appRroles) {
-        this.id = id;
+    public AppUser(String username, String password, String name, LocalDate dateCreation, Collection<AppRole> appRoles) {
         this.username = username;
         this.password = password;
+        this.name = name;
+        this.dateCreation = dateCreation;
         this.appRoles = appRoles;
     }
 
@@ -70,5 +73,13 @@ public class AppUser {
 
     public void setAppRoles(Collection<AppRole> roles) {
         this.appRoles = roles;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

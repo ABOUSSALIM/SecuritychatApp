@@ -1,5 +1,6 @@
+version: '3.8'
+
 services:
- 
   db:
     image: postgres:13
     container_name: postgres-db
@@ -8,42 +9,45 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: graphql
     ports:
-      - "5050:5432"  
+      - "5050:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "pg_isready", "-h", "localhost", "-U", "postgres"]
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
       retries: 10
       timeout: 2s
 
   backend:
     build:
-      context: ./chatApp 
+      context: ./chatApp
+    container_name: chatApp-backend
     ports:
-      - "8083:8083"  
+      - "8083:8080"
     depends_on:
       db:
-        condition: service_healthy  
+        condition: service_healthy
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/chatDB
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: graphql
     healthcheck:
-      test: ["CMD", "pg_isready", "-h", "db", "-U", "postgres"]
-      interval: 5s
-      retries: 10
-      timeout: 2s
+      test: ["CMD-SHELL", "curl --fail http://localhost:8083/actuator/health || exit 1"]
+      interval: 10s
+      retries: 5
+      timeout: 3s
 
   frontend:
     build:
-      context: ./appy-myFront  
+      context: ./appy-myFront
+    container_name: appy-frontend
     ports:
-      - "80:80"  
+      - "80:80"
     depends_on:
       backend:
-        condition: service_started  
+        condition: service_healthy
 
 volumes:
   postgres-data:
     driver: local
+

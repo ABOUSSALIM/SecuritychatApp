@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Register() {
     const [username, setUsername] = useState("");
+    const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const [passwordRepeat, setPasswordRepeat] = useState("");
     const [agree, setAgree] = useState(false);
@@ -19,6 +20,7 @@ function Register() {
         try {
             await axios.post("http://localhost:8083/api/addUser", {
                 username: username,
+                name: name ,
                 password: password,
             });
             alert("Inscription réussie !");
@@ -34,16 +36,29 @@ function Register() {
                 <div className="image-holder"></div>
                 <form onSubmit={save} action="/login">
                     <h2 className="text-center"><strong>Entrer vos Données</strong> </h2>
+                    
+                    <div className="form-group">
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="name"
+                            placeholder="Nom et Prenom "
+                            value={name}
+                            onChange={(event) => setName(event.target.value)}
+                        required/>
+                    </div>
+                    
                     <div className="form-group">
                         <input
                             className="form-control"
                             type="text"
                             name="username"
-                            placeholder="Username"
+                            placeholder="Email"
                             value={username}
                             onChange={(event) => setUsername(event.target.value)}
                         required/>
                     </div>
+
                     <div className="form-group">
                         <input
                             className="form-control"
