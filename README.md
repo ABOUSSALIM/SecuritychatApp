@@ -142,7 +142,8 @@ npm install stompjs
 
 
 # Dockerisation du Projet 
-<img width="954" alt="Capture d'écran 2024-12-29 170300" src="https://github.com/user-attachments/assets/43291077-c665-4f1f-bdce-3ee61e10824d" />
+<img width="696" alt="Capture d'écran 2025-01-02 142928" src="https://github.com/user-attachments/assets/7c56f63a-745f-40c8-a6e4-fa76553c4241" />
+
 
 
 ## Liste EndPoint 
