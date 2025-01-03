@@ -93,7 +93,7 @@ Un JWT (JSON Web Token) se compose généralement de trois parties séparées pa
 
 <img width="559" alt="Capture d'écran 2024-12-29 155135" src="https://github.com/user-attachments/assets/5d6e968c-c1ce-4271-98e3-6bcefd84677c" />
 
-## Exemple d'authentification d'un client :
+## Exemple d'authentification :
 le access-token est le jeton pour s'authentifier et se connecter .
 le refresh-token est le 2 ème jeton qui permet d'obtenir un nouveau access-token après sa experation .
 
