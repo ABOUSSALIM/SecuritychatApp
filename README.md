@@ -76,7 +76,7 @@ Pour gérer les tokens côté client, nous utilisons :
 ```
 
 
-## Aperçu du projet
+## Scénario Client/Application 
 
 Ce projet utilise l'authentification stateless avec des JSON Web Tokens (JWT) pour sécuriser les requêtes API. Le frontend, construit avec React, interagit avec le backend implémenté en Spring Boot, où des tokens JWT sont utilisés pour authentifier les utilisateurs et protéger les routes. PostgreSQL est utilisé pour stocker les données utilisateur, y compris les noms d'utilisateur, les emails et les mots de passe chiffrés.
 
